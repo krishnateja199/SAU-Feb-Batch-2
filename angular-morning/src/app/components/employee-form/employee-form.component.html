@@ -1,0 +1,120 @@
+<div class="myCardClass card">
+  <h2 style="text-align:left">{{ title }}</h2>
+  <br />
+  <form style="margin-left: 1%" style="background-color: rgb(178, 178, 226);" [formGroup]="employeeForm" (submit)="createEmployee()">
+     
+      <div class>
+        <div class="col-md-3 mb-3">
+        <label for="FirstName"><b>Enter First Name</b></label>
+        <input type="text" class="form-control" id="FirstName" placeholder="First name" formControlName="FirstName" />
+       
+        <div *ngIf="
+            (!employeeForm.get('FirstName').valid &&
+              employeeForm.get('FirstName').touched) ||
+            (submitted && !employeeForm.get('FirstName').valid)
+          " class="invalid-feedback" style="display: block">
+          Please provide a First Name
+          </div>
+        </div>
+      </div>
+      
+     
+      <div class='teja'>
+        
+        <div class="col-md-3 mb-3">
+        <label for="LastName" ><b>Last name</b></label>
+        <input type="text" class="form-control" id="LastName" placeholder="Last name" formControlName="LastName" />
+        <div *ngIf="
+            (!employeeForm.get('LastName').valid &&
+              employeeForm.get('LastName').touched) ||
+            (submitted && !employeeForm.get('LastName').valid)
+          " class="invalid-feedback" style="display: block">
+          Please provide a Last Name
+        </div>
+        </div>
+      </div>
+ 
+
+    
+      <div class="col-md-3 mb-3">
+        <label for="ContactNumber"><b>Contact Number</b></label>
+        <input type="text" class="form-control" id="ContactNumber" placeholder="Contact Number"
+          formControlName="ContactNumber" />
+        <div *ngIf="
+            (!employeeForm.get('ContactNumber').valid &&
+              employeeForm.get('ContactNumber').touched) ||
+            (submitted && !employeeForm.get('ContactNumber').valid)
+          " class="invalid-feedback" style="display: block">
+          Please provide a valid Contact Number.
+        </div>
+      </div>
+     
+      <div class>
+        <div class="col-md-3 mb-3">
+        <label for="IdNo"><b>Your ID No.</b></label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">17B81A0&nbsp;</span>
+          </div>
+          <input type="text" class="form-control" id="IdNo" value="{{ IdNo }}" placeholder="ID No."
+            aria-describedby="inputGroupPrepend" disabled />
+        </div>
+      </div>
+      </div>
+  
+    <div class>
+     
+        
+      <div class="col-md-3 mb-3">
+        <label for="City"><b>City</b></label>
+        <input type="text" class="form-control" id="City" placeholder="City" formControlName="City" />
+        <div *ngIf="
+            (!employeeForm.get('City').valid &&
+              employeeForm.get('City').touched) ||
+            (submitted && !employeeForm.get('City').valid)
+          " class="invalid-feedback" style="display: block">
+          Please provide a City.
+        </div>
+      </div>
+      &nbsp;&nbsp;
+      <div class="col-md-4 mb-3">
+        <label for="PinCode"><b>PinCode</b></label>
+        <input type="number" class="form-control" id="PinCode" placeholder="PinCode" formControlName="PinCode" />
+        <div *ngIf="
+            (!employeeForm.get('PinCode').valid &&
+              employeeForm.get('PinCode').touched) ||
+            (submitted && !employeeForm.get('PinCode').valid)
+          " class="invalid-feedback" style="display: block">
+          Please Enter a Valid Pincode
+        </div>
+      </div>
+      &nbsp;&nbsp;
+      <div class="col-md-4 mb-3">
+        <label for="DOB"><b>Date Of Birth</b></label>
+        <input type="date" class="form-control" id="DOB" placeholder="Date Of Birth" formControlName="DOB" />
+        <div *ngIf="
+            (!employeeForm.get('DOB').valid && employeeForm.get('DOB').touched) ||
+            (submitted && !employeeForm.get('DOB').valid)
+          " class="invalid-feedback" style="display: block">
+          Please Select a DOB
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="form-check mb-2 mr-sm-2">
+      <input class="form-check-input" type="checkbox" id="c_me" formControlName="check" />
+      <label class="form-check-label" for="c_me"> Check Me </label>
+      <div *ngIf="
+          (!employeeForm.get('check').valid &&
+            employeeForm.get('check').touched) ||
+          (submitted && !employeeForm.get('check').valid)
+        " class="invalid-feedback" style="display: block">
+        Please Check Me
+      </div>
+    </div>
+    <button class="btn btn-primary automate" type="submit">
+      <b>SAVE EMPLOYEE DETAILS</b>
+    </button>
+  </form>
+</div>

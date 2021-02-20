@@ -1,0 +1,82 @@
+<div class="rightContainer card">
+  <h2 style="text-align: center">{{ title }}</h2>
+  <br />
+  <hr />
+  <div>
+    <form style="margin-left: 2%; margin-right: 2%">
+      <div class="my_table box">
+        <table class="table">
+          <thead>
+            <tr style="cursor: pointer">
+              <th scope="col">
+                <div [ngSwitch]="sort.one" (click)="sortBy('IdNo')">
+                  ID No.
+                  <span *ngSwitchCase="'asc'" class="sort">&nbsp;&#8593;</span>
+                  <span *ngSwitchCase="'dsc'" class="sort">&nbsp;&#8595;</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div [ngSwitch]="sort.two" (click)="sortBy('FirstName')">
+                  First Name
+                  <span *ngSwitchCase="'asc'" class="sort">&nbsp;&#8593;</span>
+                  <span *ngSwitchCase="'dsc'" class="sort">&nbsp;&#8595;</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div [ngSwitch]="sort.three" (click)="sortBy('LastName')">
+                  Last Name
+                  <span *ngSwitchCase="'asc'" class="sort">&nbsp;&#8593;</span>
+                  <span *ngSwitchCase="'dsc'" class="sort">&nbsp;&#8595;</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div [ngSwitch]="sort.four" (click)="sortBy('ContactNumber')">
+                  Phone
+                  <span *ngSwitchCase="'asc'" class="sort">&nbsp;&#8593;</span>
+                  <span *ngSwitchCase="'dsc'" class="sort">&nbsp;&#8595;</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div [ngSwitch]="sort.five" (click)="sortBy('DOB')">
+                  DOB
+                  <span *ngSwitchCase="'asc'" class="sort">&nbsp;&#8593;</span>
+                  <span *ngSwitchCase="'dsc'" class="sort">&nbsp;&#8595;</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div [ngSwitch]="sort.six" (click)="sortBy('City')">
+                  City
+                  <span *ngSwitchCase="'asc'" class="sort">&nbsp;&#8593;</span>
+                  <span *ngSwitchCase="'dsc'" class="sort">&nbsp;&#8595;</span>
+                </div>
+              </th>
+              <th scope="col">
+                <div [ngSwitch]="sort.seven" (click)="sortBy('PinCode')">
+                  Pincode
+                  <span *ngSwitchCase="'asc'" class="sort">&nbsp;&#8593;</span>
+                  <span *ngSwitchCase="'dsc'" class="sort">&nbsp;&#8595;</span>
+                </div>
+              </th>
+              <th scope="col">Remove</th>
+            </tr>
+          </thead>
+          <tbody id="data_table" *ngFor="let data of employeeList">
+            <tr>
+              <td>171B81A{{ data.IdNo }}</td>
+              <td>{{ data.FirstName }}</td>
+              <td>{{ data.LastName }}</td>
+              <td>{{ data.ContactNumber }}</td>
+              <td>{{ data.DOB | MyDate: "MM_A DD, YYYY" }}</td>
+              <td>{{ data.City }}</td>
+              <td>{{ data.PinCode }}</td>
+              <td (click)="deleteEmp(data)">
+              <h6>delete_record</h6>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+      </div>
+    </form>
+  </div>
+</div>

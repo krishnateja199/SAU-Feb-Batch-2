@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ title }}</title>
+</head>
+
+<body style="background-color: rgb(23, 173, 123)">
+  <app-employee-form (createEntry)="createEmployee($event)"></app-employee-form>
+  <app-employee-table [employeeList]="employeeList" (sortTable)="sortBy($event)" (deleteEmployee)="deleteEmployee($event)">
+  </app-employee-table>
+</body>
+
+</html>
