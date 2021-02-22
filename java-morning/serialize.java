@@ -69,6 +69,8 @@ public class serialize {
                 String subject=(eElement.getElementsByTagName("subject").item(0).getTextContent());
                 items[temp]=new obj(roll,marks,subject);
             }
+         //   System.out.println(items[8].marks);
+
             HashMap<Integer,Integer> hm=new HashMap<>();
             for(int i=0;i<nList.getLength();i++){
                 if(hm.containsKey(items[i].rollno)){
@@ -104,6 +106,7 @@ public class serialize {
  
              for(i=0;i<nList.getLength()/3;i++) {
                  arr[i] = (res) in.readObject();
+               //  System.out.printl("hello "+Integer.parseInt(arr[i]));
              }
              in.close();
              fin.close();
@@ -124,7 +127,7 @@ public class serialize {
                 }
             });
 
-
+                //System.out.println()
             StringBuffer oneLine = new StringBuffer();
             oneLine.append("Rank,Roll Number,Total Marks(out of 300)");
             bw.write(oneLine.toString());
