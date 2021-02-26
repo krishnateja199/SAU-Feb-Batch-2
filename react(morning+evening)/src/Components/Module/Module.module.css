@@ -1,0 +1,65 @@
+.module {
+    z-index: 99;
+    position: fixed;
+    width: 900px;
+    min-height: 400px;
+    padding: 1em;
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: minmax(50px, 65px) 0 auto 40px;
+    align-items: center;
+}
+
+.module p {
+    padding-top: 15px;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.module hr {
+    padding: 0;
+    border: 0.5px solid #d6d6d6;
+}
+
+.bookTitle {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .module {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        margin: 5%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .module {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        margin: 5%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .module {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        margin: 5%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .module {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        margin: 5%;
+    }
+}

@@ -1,0 +1,23 @@
+:root {
+  --blue: #2DE1FC;
+  --blue2: rgb(38, 192, 216);
+  --green: #68a1c2;
+  --green2: #6aa5c7;
+  --rounded: 8px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
