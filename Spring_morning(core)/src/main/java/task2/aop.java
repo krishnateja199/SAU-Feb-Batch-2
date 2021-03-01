@@ -10,18 +10,18 @@ import org.springframework.stereotype.Component;
 @EnableAspectJAutoProxy
 
 public class aop {
-    @Before("customPointcut()")
+    @Before("pointBreak()")
     public static void beforeannotation() {
-        System.out.println("Using before execute pointcut annotation");
+        System.out.println("Before calling the method");
     }
 
-    @After("customPointcut()")
+    @After("pointBreak()")
     public static void afterannotation() {
-        System.out.println("Using After execute pointcut annotation");
+        System.out.println("after calling the method");
     }
 
     @Pointcut("execution (public void getName())")
-    public void customPointcut() {
+    public void pointBreak() {
 
     }
 
