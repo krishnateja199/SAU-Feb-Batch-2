@@ -30,19 +30,5 @@ public class aop {
         System.out.println("After returning annotation. Returned roll number = " + roll);
     }
 
-    @Around("execution (int getPercentage(int,int))")
-    public Object aroundAdvices(ProceedingJoinPoint pt) {
-        Object result = null;
-        try{
-            result = pt.proceed();
-            System.out.println("Actual Percentage Before Around Advice = " + result);
-        }
-        catch (Throwable e) {
-            e.printStackTrace();
-        }
-        System.out.println(result);
-        result = 98;
-        System.out.println("Returned overridden percentage after around advice = " + result);
-        return result;
-    }
+
 }
