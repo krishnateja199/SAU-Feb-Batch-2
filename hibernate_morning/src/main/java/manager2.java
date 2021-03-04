@@ -26,7 +26,7 @@ public class manager2 {
         Configuration configuration = new Configuration();
         configuration.configure("hibernate.cfg.xml");
 
-        SessionFactory factory = configuration.buildSessionFactory();
+        //SessionFactory factory = configuration.buildSessionFactory();
 
         Transaction tx = session.beginTransaction();
 
