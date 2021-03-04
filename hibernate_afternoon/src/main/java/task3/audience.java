@@ -15,8 +15,11 @@ public class audience {
     // this time we don't get a third table while creating the mapping, cause the mapping
     // is done by audience class. More precisely, it is done by the screen object inside audience class.
     // So for many to one relation. Many audience belong to one screen. therefore there can be a sepatate column of
+
+
     @ManyToOne
     private screen screen1;
+
 
     public screen getScreen1()
     {

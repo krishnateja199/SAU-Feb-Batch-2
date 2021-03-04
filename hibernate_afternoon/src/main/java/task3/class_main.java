@@ -10,11 +10,11 @@ public class class_main {
     public static void main(String[] args) {
         audience a1 = new audience();
         a1.setAge(21);
-        a1.setName("Teja");
+        a1.setName("rajesh");
 
         audience a2 = new audience();
         a2.setAge(22);
-        a2.setName("krishna");
+        a2.setName("yashwanth");
 
 
         screen st = new screen();
