@@ -22,7 +22,7 @@ public class aop {
 
     @Pointcut("execution (public void getName())")
     public void pointBreak() {
-
+     System.out.println("point break");
     }
 
     @AfterReturning(pointcut = "execution(int getRollnumber())", returning = "roll")
